@@ -1,0 +1,560 @@
+2025-03-19 13:15:24,365 - INFO - Fetching data for exp: 75, plant: 2470, control: 13
+2025-03-19 13:15:24,368 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=75&controlSystemId=13&fromDate=2024-10-02T00:00:00&toDate=2024-11-17T00:00:00&plants=2470&params=dt,pnw
+2025-03-19 13:15:34,513 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=75&controlSystemId=13&fromDate=2024-10-02T00:00:00&toDate=2024-11-17T00:00:00&plants=2470&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 13:15:43,201 - INFO - got the data of plant 2470, exp 75 from Date:2024-10-02 to 2024-11-16
+2025-03-19 13:15:43,227 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2024-10-02 00:00:00  6237.01  83.8    17.0    0.0  0.31366          13      75     2470     cereal      sand
+1 2024-10-02 00:03:00  6320.41  85.8    18.0    0.0  0.29285          13      75     2470     cereal      sand
+2 2024-10-02 00:06:00  6253.97  80.6    18.0    0.0  0.40009          13      75     2470     cereal      sand
+2025-03-19 13:15:43,295 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  exp_ID plant_ID plant_type soil_sand  light_hours       DLI  control_id     dt       pnw
+0 2024-10-02  21.840708  50.639823  350.345133  1.432544    75.0     2470     cereal      sand         11.3  14.25204        13.0  19.92  39.69325
+1 2024-10-03  21.925439  51.175877  353.337719  1.434562    75.0     2470     cereal      sand         11.4  14.50098        13.0  21.09  43.34156
+2 2024-10-04  21.793860  52.428947  343.627193  1.379888    75.0     2470     cereal      sand         11.4  14.10246        13.0  19.63  40.76056
+2025-03-19 13:15:43,342 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 13:15:43,344 - INFO - Final dataset prepared successfully.
+2025-03-19 13:15:48,768 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 13:15:48,771 - INFO - Loading models for evaluation.
+2025-03-19 13:15:49,185 - INFO - comparing modles performance
+2025-03-19 13:21:33,210 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 13:21:33,212 - INFO - Loading models for evaluation.
+2025-03-19 13:21:33,478 - INFO - comparing modles performance
+2025-03-19 13:21:47,876 - INFO - Fetching data for exp: 75, plant: 2470, control: 13
+2025-03-19 13:21:47,877 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=75&controlSystemId=13&fromDate=2024-10-02T00:00:00&toDate=2024-11-17T00:00:00&plants=2470&params=dt,pnw
+2025-03-19 13:21:53,152 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=75&controlSystemId=13&fromDate=2024-10-02T00:00:00&toDate=2024-11-17T00:00:00&plants=2470&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 13:21:54,295 - INFO - got the data of plant 2470, exp 75 from Date:2024-10-02 to 2024-11-16
+2025-03-19 13:21:54,316 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2024-10-02 00:00:00  6237.01  83.8    17.0    0.0  0.31366          13      75     2470     cereal      sand
+1 2024-10-02 00:03:00  6320.41  85.8    18.0    0.0  0.29285          13      75     2470     cereal      sand
+2 2024-10-02 00:06:00  6253.97  80.6    18.0    0.0  0.40009          13      75     2470     cereal      sand
+2025-03-19 13:21:54,351 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  exp_ID plant_ID plant_type soil_sand  light_hours       DLI  control_id     dt       pnw
+0 2024-10-02  21.840708  50.639823  350.345133  1.432544    75.0     2470     cereal      sand         11.3  14.25204        13.0  19.92  39.69325
+1 2024-10-03  21.925439  51.175877  353.337719  1.434562    75.0     2470     cereal      sand         11.4  14.50098        13.0  21.09  43.34156
+2 2024-10-04  21.793860  52.428947  343.627193  1.379888    75.0     2470     cereal      sand         11.4  14.10246        13.0  19.63  40.76056
+2025-03-19 13:21:54,366 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 13:21:54,368 - INFO - Final dataset prepared successfully.
+2025-03-19 13:21:58,696 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 13:21:58,697 - INFO - Loading models for evaluation.
+2025-03-19 13:21:59,021 - INFO - comparing modles performance
+2025-03-19 13:23:32,005 - INFO - Fetching data for exp: 75, plant: 2470, control: 13
+2025-03-19 13:23:32,005 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=75&controlSystemId=13&fromDate=2024-10-02T00:00:00&toDate=2024-11-17T00:00:00&plants=2470&params=dt,pnw
+2025-03-19 13:23:32,470 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=75&controlSystemId=13&fromDate=2024-10-02T00:00:00&toDate=2024-11-17T00:00:00&plants=2470&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 13:23:33,636 - INFO - got the data of plant 2470, exp 75 from Date:2024-10-02 to 2024-11-16
+2025-03-19 13:23:33,642 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2024-10-02 00:00:00  6237.01  83.8    17.0    0.0  0.31366          13      75     2470     cereal      sand
+1 2024-10-02 00:03:00  6320.41  85.8    18.0    0.0  0.29285          13      75     2470     cereal      sand
+2 2024-10-02 00:06:00  6253.97  80.6    18.0    0.0  0.40009          13      75     2470     cereal      sand
+2025-03-19 13:23:33,691 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  exp_ID plant_ID plant_type soil_sand  light_hours       DLI  control_id     dt       pnw
+0 2024-10-02  21.840708  50.639823  350.345133  1.432544    75.0     2470     cereal      sand         11.3  14.25204        13.0  19.92  39.69325
+1 2024-10-03  21.925439  51.175877  353.337719  1.434562    75.0     2470     cereal      sand         11.4  14.50098        13.0  21.09  43.34156
+2 2024-10-04  21.793860  52.428947  343.627193  1.379888    75.0     2470     cereal      sand         11.4  14.10246        13.0  19.63  40.76056
+2025-03-19 13:23:33,699 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 13:23:33,700 - INFO - Final dataset prepared successfully.
+2025-03-19 13:23:36,652 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 13:23:36,656 - INFO - Loading models for evaluation.
+2025-03-19 13:23:36,969 - INFO - comparing modles performance
+2025-03-19 13:25:58,911 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 13:25:58,912 - INFO - Loading models for evaluation.
+2025-03-19 13:25:59,193 - INFO - comparing modles performance
+2025-03-19 13:26:02,294 - INFO - Fetching data for exp: 75, plant: 2470, control: 13
+2025-03-19 13:26:02,295 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=75&controlSystemId=13&fromDate=2024-10-02T00:00:00&toDate=2024-11-17T00:00:00&plants=2470&params=dt,pnw
+2025-03-19 13:26:03,610 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=75&controlSystemId=13&fromDate=2024-10-02T00:00:00&toDate=2024-11-17T00:00:00&plants=2470&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 13:26:05,112 - INFO - got the data of plant 2470, exp 75 from Date:2024-10-02 to 2024-11-16
+2025-03-19 13:26:05,124 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2024-10-02 00:00:00  6237.01  83.8    17.0    0.0  0.31366          13      75     2470     cereal      sand
+1 2024-10-02 00:03:00  6320.41  85.8    18.0    0.0  0.29285          13      75     2470     cereal      sand
+2 2024-10-02 00:06:00  6253.97  80.6    18.0    0.0  0.40009          13      75     2470     cereal      sand
+2025-03-19 13:26:05,152 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours       DLI control_id     dt       pnw
+0 2024-10-02  21.840708  50.639823  350.345133  1.432544  ...         11.3  14.25204       13.0  19.92  39.69325
+1 2024-10-03  21.925439  51.175877  353.337719  1.434562  ...         11.4  14.50098       13.0  21.09  43.34156
+2 2024-10-04  21.793860  52.428947  343.627193  1.379888  ...         11.4  14.10246       13.0  19.63  40.76056
+
+[3 rows x 14 columns]
+2025-03-19 13:26:05,165 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 13:26:05,167 - INFO - Final dataset prepared successfully.
+2025-03-19 13:26:34,392 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 13:26:34,394 - INFO - Loading models for evaluation.
+2025-03-19 13:26:34,698 - INFO - comparing modles performance
+2025-03-19 13:26:35,034 - INFO - the best model is: XGBoost
+2025-03-19 13:26:35,037 - INFO - Generating correlation plot for XGBoost
+2025-03-19 13:30:18,674 - INFO - Fetching data for exp: 71, plant: 2155, control: 13
+2025-03-19 13:30:18,675 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=71&controlSystemId=13&fromDate=2024-04-17T00:00:00&toDate=2024-05-09T00:00:00&plants=2155&params=dt,pnw
+2025-03-19 13:30:24,292 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=71&controlSystemId=13&fromDate=2024-04-17T00:00:00&toDate=2024-05-09T00:00:00&plants=2155&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 13:30:28,100 - INFO - got the data of plant 2155, exp 71 from Date:2024-04-17 to 2024-05-08
+2025-03-19 13:30:28,107 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2024-04-17 00:00:00  5721.70  81.9    21.0    0.0  0.44981          13      71     2155     tomato      sand
+1 2024-04-17 00:03:00  5906.92  82.1    21.0    0.0  0.44484          13      71     2155     tomato      sand
+2 2024-04-17 00:06:00  5827.28  82.3    21.0    0.0  0.43987          13      71     2155     tomato      sand
+2025-03-19 13:30:28,142 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours       DLI control_id     dt       pnw
+0 2024-04-17  26.503968  51.011508  601.948413  1.884040  ...        12.60  27.30438       13.0  48.47  49.44171
+1 2024-04-18  26.342520  49.819685  535.039370  1.801599  ...        12.70  24.46200       13.0  18.36  56.17916
+2 2024-04-19  26.593625  51.556574  617.314741  1.832409  ...        12.55  27.89028       13.0  29.93  73.30919
+
+[3 rows x 14 columns]
+2025-03-19 13:30:28,152 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 13:30:28,153 - INFO - Final dataset prepared successfully.
+2025-03-19 13:30:39,224 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 13:30:39,226 - INFO - Loading models for evaluation.
+2025-03-19 13:30:39,512 - INFO - comparing modles performance
+2025-03-19 13:30:39,648 - INFO - the best model is: XGBoost
+2025-03-19 13:30:39,649 - INFO - Generating correlation plot for XGBoost
+2025-03-19 13:33:11,179 - INFO - Fetching data for exp: 71, plant: 2155, control: 13
+2025-03-19 13:33:11,189 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=71&controlSystemId=13&fromDate=2024-04-17T00:00:00&toDate=2024-05-09T00:00:00&plants=2155&params=dt,pnw
+2025-03-19 13:33:11,681 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=71&controlSystemId=13&fromDate=2024-04-17T00:00:00&toDate=2024-05-09T00:00:00&plants=2155&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 13:33:12,436 - INFO - got the data of plant 2155, exp 71 from Date:2024-04-17 to 2024-05-08
+2025-03-19 13:33:12,444 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2024-04-17 00:00:00  5721.70  81.9    21.0    0.0  0.44981          13      71     2155     tomato      sand
+1 2024-04-17 00:03:00  5906.92  82.1    21.0    0.0  0.44484          13      71     2155     tomato      sand
+2 2024-04-17 00:06:00  5827.28  82.3    21.0    0.0  0.43987          13      71     2155     tomato      sand
+2025-03-19 13:33:12,477 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours       DLI control_id     dt       pnw
+0 2024-04-17  26.503968  51.011508  601.948413  1.884040  ...        12.60  27.30438       13.0  48.47  49.44171
+1 2024-04-18  26.342520  49.819685  535.039370  1.801599  ...        12.70  24.46200       13.0  18.36  56.17916
+2 2024-04-19  26.593625  51.556574  617.314741  1.832409  ...        12.55  27.89028       13.0  29.93  73.30919
+
+[3 rows x 14 columns]
+2025-03-19 13:33:12,484 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 13:33:12,485 - INFO - Final dataset prepared successfully.
+2025-03-19 13:33:22,863 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 13:33:22,863 - INFO - Loading models for evaluation.
+2025-03-19 13:33:23,158 - INFO - comparing modles performance
+2025-03-19 13:33:23,290 - INFO - the best model is: Neural Network
+2025-03-19 13:33:23,420 - INFO - Generating correlation plot for Neural Network
+2025-03-19 13:33:40,912 - INFO - Fetching data for exp: 71, plant: 2155, control: 13
+2025-03-19 13:33:40,913 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=71&controlSystemId=13&fromDate=2024-04-17T00:00:00&toDate=2024-05-09T00:00:00&plants=2155&params=dt,pnw
+2025-03-19 13:33:41,162 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=71&controlSystemId=13&fromDate=2024-04-17T00:00:00&toDate=2024-05-09T00:00:00&plants=2155&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 13:33:41,601 - INFO - got the data of plant 2155, exp 71 from Date:2024-04-17 to 2024-05-08
+2025-03-19 13:33:41,614 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2024-04-17 00:00:00  5721.70  81.9    21.0    0.0  0.44981          13      71     2155     tomato      sand
+1 2024-04-17 00:03:00  5906.92  82.1    21.0    0.0  0.44484          13      71     2155     tomato      sand
+2 2024-04-17 00:06:00  5827.28  82.3    21.0    0.0  0.43987          13      71     2155     tomato      sand
+2025-03-19 13:33:41,648 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours       DLI control_id     dt       pnw
+0 2024-04-17  26.503968  51.011508  601.948413  1.884040  ...        12.60  27.30438       13.0  48.47  49.44171
+1 2024-04-18  26.342520  49.819685  535.039370  1.801599  ...        12.70  24.46200       13.0  18.36  56.17916
+2 2024-04-19  26.593625  51.556574  617.314741  1.832409  ...        12.55  27.89028       13.0  29.93  73.30919
+
+[3 rows x 14 columns]
+2025-03-19 13:33:41,656 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 13:33:41,658 - INFO - Final dataset prepared successfully.
+2025-03-19 13:33:55,293 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 13:33:55,295 - INFO - Loading models for evaluation.
+2025-03-19 13:33:55,599 - INFO - comparing modles performance
+2025-03-19 13:33:55,717 - WARNING - 5 out of the last 10 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000023EF6B0BBE0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-03-19 13:33:55,722 - INFO - the best model is: XGBoost
+2025-03-19 13:33:55,723 - INFO - Generating correlation plot for XGBoost
+2025-03-19 13:34:17,099 - INFO - Fetching data for exp: 71, plant: 2155, control: 13
+2025-03-19 13:34:17,099 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=71&controlSystemId=13&fromDate=2024-04-18T00:00:00&toDate=2024-05-09T00:00:00&plants=2155&params=dt,pnw
+2025-03-19 13:34:20,840 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=71&controlSystemId=13&fromDate=2024-04-18T00:00:00&toDate=2024-05-09T00:00:00&plants=2155&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 13:34:24,516 - INFO - got the data of plant 2155, exp 71 from Date:2024-04-18 to 2024-05-08
+2025-03-19 13:34:24,533 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2024-04-18 00:00:00  5723.77  66.3    23.0    0.0  0.94614          13      71     2155     tomato      sand
+1 2024-04-18 00:03:00  5910.78  66.6    23.0    0.0  0.93772          13      71     2155     tomato      sand
+2 2024-04-18 00:06:00  5831.87  68.0    23.0    0.0  0.89841          13      71     2155     tomato      sand
+2025-03-19 13:34:24,558 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours       DLI control_id     dt       pnw
+0 2024-04-18  26.342520  49.819685  535.039370  1.801599  ...        12.70  24.46200       13.0  18.36  56.17916
+1 2024-04-19  26.593625  51.556574  617.314741  1.832409  ...        12.55  27.89028       13.0  29.93  73.30919
+2 2024-04-20  25.632411  53.974704  554.075099  1.668238  ...        12.65  25.23258       13.0  28.21  75.22208
+
+[3 rows x 14 columns]
+2025-03-19 13:34:24,565 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 13:34:24,567 - INFO - Final dataset prepared successfully.
+2025-03-19 13:34:28,751 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 13:34:28,756 - INFO - Loading models for evaluation.
+2025-03-19 13:34:29,038 - INFO - comparing modles performance
+2025-03-19 13:34:29,167 - WARNING - 6 out of the last 12 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000023EF6A54A60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-03-19 13:34:29,180 - INFO - the best model is: XGBoost
+2025-03-19 13:34:29,181 - INFO - Generating correlation plot for XGBoost
+2025-03-19 13:38:58,675 - INFO - Fetching data for exp: 73, plant: 2366, control: 13
+2025-03-19 13:38:58,676 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=73&controlSystemId=13&fromDate=2024-07-15T00:00:00&toDate=2024-08-01T00:00:00&plants=2366&params=dt,pnw
+2025-03-19 13:39:04,114 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=73&controlSystemId=13&fromDate=2024-07-15T00:00:00&toDate=2024-08-01T00:00:00&plants=2366&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 13:39:07,175 - INFO - got the data of plant 2366, exp 73 from Date:2024-07-15 to 2024-07-31
+2025-03-19 13:39:07,183 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2024-07-15 00:00:00  6697.77  56.7    18.0    0.0  0.89299          13      73     2366     tomato      sand
+1 2024-07-15 00:03:00  6707.72  56.9    18.0    0.0  0.88887          13      73     2366     tomato      sand
+2 2024-07-15 00:06:00  6703.33  58.8    18.0    0.0  0.84968          13      73     2366     tomato      sand
+2025-03-19 13:39:07,220 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours       DLI control_id      dt       pnw
+0 2024-07-15  24.644689  43.482784  574.512821  1.910489  ...        13.65  28.23156       13.0  120.65  62.38107
+1 2024-07-16  25.143382  44.745221  618.636029  1.962112  ...        13.60  30.28842       13.0  143.29  74.64097
+2 2024-07-17  25.221402  45.454613  625.081181  1.970890  ...        13.55  30.49146       13.0  167.93  93.41841
+
+[3 rows x 14 columns]
+2025-03-19 13:39:07,227 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 13:39:07,229 - INFO - Final dataset prepared successfully.
+2025-03-19 13:39:24,250 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 13:39:24,253 - INFO - Loading models for evaluation.
+2025-03-19 13:39:24,542 - INFO - comparing modles performance
+2025-03-19 13:39:24,694 - INFO - the best model is: Random Forest
+2025-03-19 13:39:24,700 - INFO - Generating correlation plot for Random Forest
+2025-03-19 13:41:48,139 - INFO - Fetching data for exp: 71, plant: 2155, control: 13
+2025-03-19 13:41:48,141 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=71&controlSystemId=13&fromDate=2024-04-18T00:00:00&toDate=2024-05-09T00:00:00&plants=2155&params=dt,pnw
+2025-03-19 13:41:49,618 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=71&controlSystemId=13&fromDate=2024-04-18T00:00:00&toDate=2024-05-09T00:00:00&plants=2155&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 13:41:50,340 - INFO - got the data of plant 2155, exp 71 from Date:2024-04-18 to 2024-05-08
+2025-03-19 13:41:50,357 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2024-04-18 00:00:00  5723.77  66.3    23.0    0.0  0.94614          13      71     2155     tomato      sand
+1 2024-04-18 00:03:00  5910.78  66.6    23.0    0.0  0.93772          13      71     2155     tomato      sand
+2 2024-04-18 00:06:00  5831.87  68.0    23.0    0.0  0.89841          13      71     2155     tomato      sand
+2025-03-19 13:41:50,380 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours       DLI control_id     dt       pnw
+0 2024-04-18  26.342520  49.819685  535.039370  1.801599  ...        12.70  24.46200       13.0  18.36  56.17916
+1 2024-04-19  26.593625  51.556574  617.314741  1.832409  ...        12.55  27.89028       13.0  29.93  73.30919
+2 2024-04-20  25.632411  53.974704  554.075099  1.668238  ...        12.65  25.23258       13.0  28.21  75.22208
+
+[3 rows x 14 columns]
+2025-03-19 13:41:50,387 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 13:41:50,388 - INFO - Final dataset prepared successfully.
+2025-03-19 13:41:54,744 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 13:41:54,746 - INFO - Loading models for evaluation.
+2025-03-19 13:41:55,020 - INFO - comparing modles performance
+2025-03-19 13:41:55,144 - INFO - the best model is: XGBoost
+2025-03-19 13:41:55,147 - INFO - Generating correlation plot for XGBoost
+2025-03-19 13:43:13,397 - INFO - Fetching data for exp: 71, plant: 2155, control: 13
+2025-03-19 13:43:13,398 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=71&controlSystemId=13&fromDate=2024-04-18T00:00:00&toDate=2024-05-07T00:00:00&plants=2155&params=dt,pnw
+2025-03-19 13:43:16,842 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=71&controlSystemId=13&fromDate=2024-04-18T00:00:00&toDate=2024-05-07T00:00:00&plants=2155&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 13:43:20,046 - INFO - got the data of plant 2155, exp 71 from Date:2024-04-18 to 2024-05-06
+2025-03-19 13:43:20,055 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2024-04-18 00:00:00  5723.77  66.3    23.0    0.0  0.94614          13      71     2155     tomato      sand
+1 2024-04-18 00:03:00  5910.78  66.6    23.0    0.0  0.93772          13      71     2155     tomato      sand
+2 2024-04-18 00:06:00  5831.87  68.0    23.0    0.0  0.89841          13      71     2155     tomato      sand
+2025-03-19 13:43:20,084 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours       DLI control_id     dt       pnw
+0 2024-04-18  26.342520  49.819685  535.039370  1.801599  ...        12.70  24.46200       13.0  18.36  56.17916
+1 2024-04-19  26.593625  51.556574  617.314741  1.832409  ...        12.55  27.89028       13.0  29.93  73.30919
+2 2024-04-20  25.632411  53.974704  554.075099  1.668238  ...        12.65  25.23258       13.0  28.21  75.22208
+
+[3 rows x 14 columns]
+2025-03-19 13:43:20,095 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 13:43:20,096 - INFO - Final dataset prepared successfully.
+2025-03-19 13:44:35,622 - INFO - Dropped 3 rows with NaN values.
+2025-03-19 13:44:35,623 - INFO - Loading models for evaluation.
+2025-03-19 13:44:35,896 - INFO - comparing modles performance
+2025-03-19 13:44:36,024 - INFO - the best model is: XGBoost
+2025-03-19 13:44:36,026 - INFO - Generating correlation plot for XGBoost
+2025-03-19 13:45:16,782 - INFO - Fetching data for exp: 71, plant: 2155, control: 13
+2025-03-19 13:45:16,784 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=71&controlSystemId=13&fromDate=2024-04-18T00:00:00&toDate=2024-05-07T00:00:00&plants=2155&params=dt,pnw
+2025-03-19 13:45:17,286 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=71&controlSystemId=13&fromDate=2024-04-18T00:00:00&toDate=2024-05-07T00:00:00&plants=2155&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 13:45:17,975 - INFO - got the data of plant 2155, exp 71 from Date:2024-04-18 to 2024-05-06
+2025-03-19 13:45:17,985 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2024-04-18 00:00:00  5723.77  66.3    23.0    0.0  0.94614          13      71     2155     tomato      sand
+1 2024-04-18 00:03:00  5910.78  66.6    23.0    0.0  0.93772          13      71     2155     tomato      sand
+2 2024-04-18 00:06:00  5831.87  68.0    23.0    0.0  0.89841          13      71     2155     tomato      sand
+2025-03-19 13:45:18,018 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours       DLI control_id     dt       pnw
+0 2024-04-18  26.342520  49.819685  535.039370  1.801599  ...        12.70  24.46200       13.0  18.36  56.17916
+1 2024-04-19  26.593625  51.556574  617.314741  1.832409  ...        12.55  27.89028       13.0  29.93  73.30919
+2 2024-04-20  25.632411  53.974704  554.075099  1.668238  ...        12.65  25.23258       13.0  28.21  75.22208
+
+[3 rows x 14 columns]
+2025-03-19 13:45:18,025 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 13:45:18,027 - INFO - Final dataset prepared successfully.
+2025-03-19 13:45:35,400 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 13:45:35,401 - INFO - Loading models for evaluation.
+2025-03-19 13:45:35,673 - INFO - comparing modles performance
+2025-03-19 13:45:35,801 - INFO - the best model is: XGBoost
+2025-03-19 13:45:35,802 - INFO - Generating correlation plot for XGBoost
+2025-03-19 13:47:02,730 - INFO - Fetching data for exp: 75, plant: 2470, control: 13
+2025-03-19 13:47:02,732 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=75&controlSystemId=13&fromDate=2024-10-02T00:00:00&toDate=2024-11-17T00:00:00&plants=2470&params=dt,pnw
+2025-03-19 13:47:03,225 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=75&controlSystemId=13&fromDate=2024-10-02T00:00:00&toDate=2024-11-17T00:00:00&plants=2470&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 13:47:04,498 - INFO - got the data of plant 2470, exp 75 from Date:2024-10-02 to 2024-11-16
+2025-03-19 13:47:04,505 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2024-10-02 00:00:00  6237.01  83.8    17.0    0.0  0.31366          13      75     2470     cereal      sand
+1 2024-10-02 00:03:00  6320.41  85.8    18.0    0.0  0.29285          13      75     2470     cereal      sand
+2 2024-10-02 00:06:00  6253.97  80.6    18.0    0.0  0.40009          13      75     2470     cereal      sand
+2025-03-19 13:47:04,549 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours       DLI control_id     dt       pnw
+0 2024-10-02  21.840708  50.639823  350.345133  1.432544  ...         11.3  14.25204       13.0  19.92  39.69325
+1 2024-10-03  21.925439  51.175877  353.337719  1.434562  ...         11.4  14.50098       13.0  21.09  43.34156
+2 2024-10-04  21.793860  52.428947  343.627193  1.379888  ...         11.4  14.10246       13.0  19.63  40.76056
+
+[3 rows x 14 columns]
+2025-03-19 13:47:04,554 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 13:47:04,556 - INFO - Final dataset prepared successfully.
+2025-03-19 13:47:08,825 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 13:47:08,828 - INFO - Loading models for evaluation.
+2025-03-19 13:47:09,102 - INFO - comparing modles performance
+2025-03-19 13:47:09,245 - INFO - the best model is: XGBoost
+2025-03-19 13:47:09,247 - INFO - Generating correlation plot for XGBoost
+2025-03-19 14:02:57,113 - INFO - Fetching data for exp: 69, plant: 2077, control: 13
+2025-03-19 14:02:57,114 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=69&controlSystemId=13&fromDate=2023-12-04T00:00:00&toDate=2024-01-29T00:00:00&plants=2077&params=dt,pnw
+2025-03-19 14:03:06,037 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=69&controlSystemId=13&fromDate=2023-12-04T00:00:00&toDate=2024-01-29T00:00:00&plants=2077&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 14:03:15,201 - INFO - got the data of plant 2077, exp 69 from Date:2023-12-04 to 2024-01-28
+2025-03-19 14:03:15,211 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2023-12-04 00:00:00  5434.08  88.3    18.0    0.0  0.24129          13      69     2077     cereal      sand
+1 2023-12-04 00:03:00  5483.80  88.3    18.0    0.0  0.24129          13      69     2077     cereal      sand
+2 2023-12-04 00:06:00  5481.75  88.3    18.0    0.0  0.24129          13      69     2077     cereal      sand
+2025-03-19 14:03:15,259 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours      DLI control_id     dt       pnw
+0 2023-12-04  20.846154  54.295385  360.564103  1.199093  ...         9.75  12.6558       13.0  26.92   6.68120
+1 2023-12-05  19.005405  70.922703  189.513514  0.669491  ...         9.25   6.3108       13.0  20.26  10.66437
+2 2023-12-06  18.814433  74.025773  182.628866  0.577556  ...         9.70   6.3774       13.0  22.96  13.26702
+
+[3 rows x 14 columns]
+2025-03-19 14:03:15,272 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 14:03:15,274 - INFO - Final dataset prepared successfully.
+2025-03-19 14:03:26,469 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 14:03:26,471 - INFO - Loading models for evaluation.
+2025-03-19 14:03:26,749 - INFO - comparing modles performance
+2025-03-19 14:03:26,903 - INFO - the best model is: Decision Tree
+2025-03-19 14:03:26,904 - INFO - Generating correlation plot for Decision Tree
+2025-03-19 14:05:16,968 - INFO - Fetching data for exp: 69, plant: 2077, control: 13
+2025-03-19 14:05:16,969 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=69&controlSystemId=13&fromDate=2023-12-04T00:00:00&toDate=2024-01-29T00:00:00&plants=2077&params=dt,pnw
+2025-03-19 14:05:19,957 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=69&controlSystemId=13&fromDate=2023-12-04T00:00:00&toDate=2024-01-29T00:00:00&plants=2077&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 14:05:21,105 - INFO - got the data of plant 2077, exp 69 from Date:2023-12-04 to 2024-01-28
+2025-03-19 14:05:21,113 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2023-12-04 00:00:00  5434.08  88.3    18.0    0.0  0.24129          13      69     2077     cereal      sand
+1 2023-12-04 00:03:00  5483.80  88.3    18.0    0.0  0.24129          13      69     2077     cereal      sand
+2 2023-12-04 00:06:00  5481.75  88.3    18.0    0.0  0.24129          13      69     2077     cereal      sand
+2025-03-19 14:05:21,159 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours      DLI control_id     dt       pnw
+0 2023-12-04  20.846154  54.295385  360.564103  1.199093  ...         9.75  12.6558       13.0  26.92   6.68120
+1 2023-12-05  19.005405  70.922703  189.513514  0.669491  ...         9.25   6.3108       13.0  20.26  10.66437
+2 2023-12-06  18.814433  74.025773  182.628866  0.577556  ...         9.70   6.3774       13.0  22.96  13.26702
+
+[3 rows x 14 columns]
+2025-03-19 14:05:21,164 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 14:05:21,165 - INFO - Final dataset prepared successfully.
+2025-03-19 14:05:23,675 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 14:05:23,676 - INFO - Loading models for evaluation.
+2025-03-19 14:05:23,957 - INFO - comparing modles performance
+2025-03-19 14:05:24,101 - INFO - the best model is: Decision Tree
+2025-03-19 14:05:24,102 - INFO - Generating correlation plot for Decision Tree
+2025-03-19 14:07:01,347 - INFO - Fetching data for exp: 69, plant: 2009, control: 13
+2025-03-19 14:07:01,348 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=69&controlSystemId=13&fromDate=2023-12-04T00:00:00&toDate=2024-01-29T00:00:00&plants=2009&params=dt,pnw
+2025-03-19 14:07:13,024 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=69&controlSystemId=13&fromDate=2023-12-04T00:00:00&toDate=2024-01-29T00:00:00&plants=2009&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 14:07:22,332 - INFO - got the data of plant 2009, exp 69 from Date:2023-12-04 to 2024-01-28
+2025-03-19 14:07:22,356 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2023-12-04 00:00:00  5326.10  88.3    18.0    0.0  0.24129          13      69     2009     cereal      sand
+1 2023-12-04 00:03:00  5356.87  88.3    18.0    0.0  0.24129          13      69     2009     cereal      sand
+2 2023-12-04 00:06:00  5348.19  88.3    18.0    0.0  0.24129          13      69     2009     cereal      sand
+2025-03-19 14:07:22,434 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours      DLI control_id     dt      pnw
+0 2023-12-04  20.846154  54.295385  360.564103  1.199093  ...         9.75  12.6558       13.0  13.15  0.43654
+1 2023-12-05  19.005405  70.922703  189.513514  0.669491  ...         9.25   6.3108       13.0  12.38  2.38023
+2 2023-12-06  18.814433  74.025773  182.628866  0.577556  ...         9.70   6.3774       13.0   9.48 -0.16406
+
+[3 rows x 14 columns]
+2025-03-19 14:07:22,441 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 14:07:22,442 - INFO - Final dataset prepared successfully.
+2025-03-19 14:07:25,018 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 14:07:25,020 - INFO - Loading models for evaluation.
+2025-03-19 14:07:25,315 - INFO - comparing modles performance
+2025-03-19 14:07:25,589 - INFO - the best model is: XGBoost
+2025-03-19 14:07:25,593 - INFO - Generating correlation plot for XGBoost
+2025-03-19 14:08:30,378 - INFO - Fetching data for exp: 69, plant: 2014, control: 13
+2025-03-19 14:08:30,379 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=69&controlSystemId=13&fromDate=2023-12-04T00:00:00&toDate=2024-01-29T00:00:00&plants=2014&params=dt,pnw
+2025-03-19 14:08:39,861 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=69&controlSystemId=13&fromDate=2023-12-04T00:00:00&toDate=2024-01-29T00:00:00&plants=2014&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 14:08:48,651 - INFO - got the data of plant 2014, exp 69 from Date:2023-12-04 to 2024-01-28
+2025-03-19 14:08:48,658 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2023-12-04 00:00:00  5458.83  88.3    18.0    0.0  0.24129          13      69     2014     cereal      sand
+1 2023-12-04 00:03:00  5493.01  88.3    18.0    0.0  0.24129          13      69     2014     cereal      sand
+2 2023-12-04 00:06:00  5482.35  88.3    18.0    0.0  0.24129          13      69     2014     cereal      sand
+2025-03-19 14:08:48,692 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours      DLI control_id     dt      pnw
+0 2023-12-04  20.846154  54.295385  360.564103  1.199093  ...         9.75  12.6558       13.0  19.98 -3.87313
+1 2023-12-05  19.005405  70.922703  189.513514  0.669491  ...         9.25   6.3108       13.0  13.92 -4.13592
+2 2023-12-06  18.814433  74.025773  182.628866  0.577556  ...         9.70   6.3774       13.0  16.04 -3.08248
+
+[3 rows x 14 columns]
+2025-03-19 14:08:48,698 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 14:08:48,700 - INFO - Final dataset prepared successfully.
+2025-03-19 14:08:52,682 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 14:08:52,684 - INFO - Loading models for evaluation.
+2025-03-19 14:08:52,969 - INFO - comparing modles performance
+2025-03-19 14:08:53,111 - INFO - the best model is: Decision Tree
+2025-03-19 14:08:53,112 - INFO - Generating correlation plot for Decision Tree
+2025-03-19 14:09:16,818 - INFO - Fetching data for exp: 69, plant: 2023, control: 13
+2025-03-19 14:09:16,819 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=69&controlSystemId=13&fromDate=2023-12-04T00:00:00&toDate=2024-01-29T00:00:00&plants=2023&params=dt,pnw
+2025-03-19 14:09:25,286 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=69&controlSystemId=13&fromDate=2023-12-04T00:00:00&toDate=2024-01-29T00:00:00&plants=2023&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 14:09:33,688 - INFO - got the data of plant 2023, exp 69 from Date:2023-12-04 to 2024-01-28
+2025-03-19 14:09:33,697 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2023-12-04 00:00:00  5344.19  88.3    18.0    0.0  0.24129          13      69     2023     cereal      sand
+1 2023-12-04 00:03:00  5379.11  88.3    18.0    0.0  0.24129          13      69     2023     cereal      sand
+2 2023-12-04 00:06:00  5360.86  88.3    18.0    0.0  0.24129          13      69     2023     cereal      sand
+2025-03-19 14:09:33,738 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours      DLI control_id     dt       pnw
+0 2023-12-04  20.846154  54.295385  360.564103  1.199093  ...         9.75  12.6558       13.0  30.95  -3.32024
+1 2023-12-05  19.005405  70.922703  189.513514  0.669491  ...         9.25   6.3108       13.0  29.68  -5.50419
+2 2023-12-06  18.814433  74.025773  182.628866  0.577556  ...         9.70   6.3774       13.0  30.33 -15.51468
+
+[3 rows x 14 columns]
+2025-03-19 14:09:33,744 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 14:09:33,745 - INFO - Final dataset prepared successfully.
+2025-03-19 14:09:37,815 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 14:09:37,816 - INFO - Loading models for evaluation.
+2025-03-19 14:09:38,093 - INFO - comparing modles performance
+2025-03-19 14:09:38,241 - INFO - the best model is: Decision Tree
+2025-03-19 14:09:38,242 - INFO - Generating correlation plot for Decision Tree
+2025-03-19 14:14:01,154 - INFO - Fetching data for exp: 69, plant: 2009, control: 13
+2025-03-19 14:14:01,155 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=69&controlSystemId=13&fromDate=2023-12-04T00:00:00&toDate=2024-01-29T00:00:00&plants=2009&params=dt,pnw
+2025-03-19 14:14:01,820 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=69&controlSystemId=13&fromDate=2023-12-04T00:00:00&toDate=2024-01-29T00:00:00&plants=2009&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 14:14:02,948 - INFO - got the data of plant 2009, exp 69 from Date:2023-12-04 to 2024-01-28
+2025-03-19 14:14:02,956 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2023-12-04 00:00:00  5326.10  88.3    18.0    0.0  0.24129          13      69     2009     cereal      sand
+1 2023-12-04 00:03:00  5356.87  88.3    18.0    0.0  0.24129          13      69     2009     cereal      sand
+2 2023-12-04 00:06:00  5348.19  88.3    18.0    0.0  0.24129          13      69     2009     cereal      sand
+2025-03-19 14:14:02,995 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours      DLI control_id     dt      pnw
+0 2023-12-04  20.846154  54.295385  360.564103  1.199093  ...         9.75  12.6558       13.0  13.15  0.43654
+1 2023-12-05  19.005405  70.922703  189.513514  0.669491  ...         9.25   6.3108       13.0  12.38  2.38023
+2 2023-12-06  18.814433  74.025773  182.628866  0.577556  ...         9.70   6.3774       13.0   9.48 -0.16406
+
+[3 rows x 14 columns]
+2025-03-19 14:14:03,001 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 14:14:03,002 - INFO - Final dataset prepared successfully.
+2025-03-19 14:14:05,230 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 14:14:05,232 - INFO - Loading models for evaluation.
+2025-03-19 14:14:05,530 - INFO - comparing modles performance
+2025-03-19 14:14:05,679 - INFO - the best model is: XGBoost
+2025-03-19 14:14:05,681 - INFO - Generating correlation plot for XGBoost
+2025-03-19 15:03:22,734 - INFO - Fetching data for exp: 429, plant: 25373, control: 3
+2025-03-19 15:03:22,734 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=dt,pnw
+2025-03-19 15:03:30,616 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 15:03:37,226 - INFO - got the data of plant 25373, exp 429 from Date:2025-01-15 to 2025-02-26
+2025-03-19 15:03:37,234 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2025-01-15 00:00:00  2698.43  61.6    17.0    0.0  0.74349           3     429    25373     cereal      soil
+1 2025-01-15 00:03:00  2698.65  62.8    16.0    0.0  0.67586           3     429    25373     cereal      soil
+2 2025-01-15 00:06:00  2698.02  63.7    16.0    0.0  0.65951           3     429    25373     cereal      soil
+2025-03-19 15:03:37,262 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  ...  light_hours      DLI control_id     dt        pnw
+0 2025-01-15  19.025381  60.026396  241.316327  0.936326  ...          9.8  8.51364        3.0  45.09  182.92452
+1 2025-01-16  19.045455  69.527020  224.693878  0.718868  ...          9.8  7.92720        3.0  45.30  189.40732
+2 2025-01-17  18.310945  67.386070  198.445000  0.713376  ...         10.0  7.14402        3.0  44.55  194.94715
+
+[3 rows x 14 columns]
+2025-03-19 15:03:37,268 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 15:03:37,269 - INFO - Final dataset prepared successfully.
+2025-03-19 15:03:43,564 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 15:03:43,567 - INFO - Loading models for evaluation.
+2025-03-19 15:03:43,848 - INFO - comparing modles performance
+2025-03-19 15:03:43,994 - INFO - the best model is: Neural Network
+2025-03-19 15:03:44,147 - INFO - Generating correlation plot for Neural Network
+2025-03-19 22:23:21,310 - INFO - Fetching data for exp: 429, plant: 25373, control: 3
+2025-03-19 22:23:21,315 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=dt,pnw
+2025-03-19 22:23:23,603 - ERROR - Daily request failed: 401
+2025-03-19 22:23:23,607 - ERROR - Failed to retrieve raw data.
+2025-03-19 22:25:12,848 - INFO - Fetching data for exp: 429, plant: 25373, control: 3
+2025-03-19 22:25:12,850 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=dt,pnw
+2025-03-19 22:25:13,364 - ERROR - Daily request failed: 401
+2025-03-19 22:25:13,367 - ERROR - Failed to retrieve raw data.
+2025-03-19 22:25:32,065 - INFO - Fetching data for exp: 429, plant: 25373, control: 3
+2025-03-19 22:25:32,065 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=dt,pnw
+2025-03-19 22:25:32,356 - ERROR - Daily request failed: 401
+2025-03-19 22:25:32,360 - ERROR - Failed to retrieve raw data.
+2025-03-19 22:28:29,762 - INFO - Fetching data for exp: 429, plant: 25373, control: 3
+2025-03-19 22:28:29,763 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=dt,pnw
+2025-03-19 22:28:34,176 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 22:28:40,624 - INFO - got the data of plant 25373, exp 429 from Date:2025-01-15 to 2025-02-26
+2025-03-19 22:28:40,643 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2025-01-15 00:00:00  2698.43  61.6    17.0    0.0  0.74349           3     429    25373     cereal      soil
+1 2025-01-15 00:03:00  2698.65  62.8    16.0    0.0  0.67586           3     429    25373     cereal      soil
+2 2025-01-15 00:06:00  2698.02  63.7    16.0    0.0  0.65951           3     429    25373     cereal      soil
+2025-03-19 22:28:40,683 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  exp_ID plant_ID plant_type soil_sand  light_hours      DLI  control_id     dt        pnw
+0 2025-01-15  19.025381  60.026396  241.316327  0.936326   429.0    25373     cereal      soil          9.8  8.51364         3.0  45.09  182.92452
+1 2025-01-16  19.045455  69.527020  224.693878  0.718868   429.0    25373     cereal      soil          9.8  7.92720         3.0  45.30  189.40732
+2 2025-01-17  18.310945  67.386070  198.445000  0.713376   429.0    25373     cereal      soil         10.0  7.14402         3.0  44.55  194.94715
+2025-03-19 22:28:40,706 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 22:28:40,709 - INFO - Final dataset prepared successfully.
+2025-03-19 22:32:28,057 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 22:32:28,058 - INFO - Loading models for evaluation.
+2025-03-19 22:32:28,537 - INFO - comparing modles performance
+2025-03-19 22:32:28,800 - INFO - the best model is: Random Forest
+2025-03-19 22:32:28,805 - INFO - Generating correlation plot for Random Forest
+2025-03-19 22:37:25,232 - INFO - Fetching data for exp: 429, plant: 25373, control: 3
+2025-03-19 22:37:25,234 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=dt,pnw
+2025-03-19 22:37:28,948 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-19 22:37:30,029 - INFO - got the data of plant 25373, exp 429 from Date:2025-01-15 to 2025-02-26
+2025-03-19 22:37:30,036 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2025-01-15 00:00:00  2698.43  61.6    17.0    0.0  0.74349           3     429    25373     cereal      soil
+1 2025-01-15 00:03:00  2698.65  62.8    16.0    0.0  0.67586           3     429    25373     cereal      soil
+2 2025-01-15 00:06:00  2698.02  63.7    16.0    0.0  0.65951           3     429    25373     cereal      soil
+2025-03-19 22:37:30,062 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  exp_ID plant_ID plant_type soil_sand  light_hours      DLI  control_id     dt        pnw
+0 2025-01-15  19.025381  60.026396  241.316327  0.936326   429.0    25373     cereal      soil          9.8  8.51364         3.0  45.09  182.92452
+1 2025-01-16  19.045455  69.527020  224.693878  0.718868   429.0    25373     cereal      soil          9.8  7.92720         3.0  45.30  189.40732
+2 2025-01-17  18.310945  67.386070  198.445000  0.713376   429.0    25373     cereal      soil         10.0  7.14402         3.0  44.55  194.94715
+2025-03-19 22:37:30,067 - INFO - Selecting relevant columns from DataFrame.
+2025-03-19 22:37:30,069 - INFO - Final dataset prepared successfully.
+2025-03-19 22:37:40,494 - INFO - Dropped 2 rows with NaN values.
+2025-03-19 22:37:40,496 - INFO - Loading models for evaluation.
+2025-03-19 22:37:40,788 - INFO - comparing modles performance
+2025-03-19 22:37:40,933 - INFO - the best model is: Neural Network
+2025-03-19 22:37:41,082 - INFO - Generating correlation plot for Neural Network
+2025-03-24 14:38:42,401 - INFO - Fetching data for exp: 429, plant: 25373, control: 3
+2025-03-24 14:38:42,405 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=dt,pnw
+2025-03-24 14:38:47,551 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-24 14:38:54,367 - INFO - got the data of plant 25373, exp 429 from Date:2025-01-15 to 2025-02-26
+2025-03-24 14:38:54,394 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2025-01-15 00:00:00  2698.43  61.6    17.0    0.0  0.74349           3     429    25373     cereal      soil
+1 2025-01-15 00:03:00  2698.65  62.8    16.0    0.0  0.67586           3     429    25373     cereal      soil
+2 2025-01-15 00:06:00  2698.02  63.7    16.0    0.0  0.65951           3     429    25373     cereal      soil
+2025-03-24 14:38:54,471 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  exp_ID plant_ID plant_type soil_sand  light_hours      DLI  control_id     dt        pnw
+0 2025-01-15  19.025381  60.026396  241.316327  0.936326   429.0    25373     cereal      soil          9.8  8.51364         3.0  45.09  182.92452
+1 2025-01-16  19.045455  69.527020  224.693878  0.718868   429.0    25373     cereal      soil          9.8  7.92720         3.0  45.30  189.40732
+2 2025-01-17  18.310945  67.386070  198.445000  0.713376   429.0    25373     cereal      soil         10.0  7.14402         3.0  44.55  194.94715
+2025-03-24 14:38:54,530 - INFO - Selecting relevant columns from DataFrame.
+2025-03-24 14:38:54,531 - INFO - Final dataset prepared successfully.
+2025-03-24 14:38:59,852 - INFO - Dropped 2 rows with NaN values.
+2025-03-24 14:38:59,854 - INFO - Loading models for evaluation.
+2025-03-24 14:39:01,701 - INFO - comparing modles performance
+2025-03-24 14:39:02,141 - INFO - the best model is: Neural Network
+2025-03-24 14:39:02,282 - INFO - Generating correlation plot for Neural Network
+2025-03-24 14:41:01,732 - INFO - Fetching data for exp: 429, plant: 25373, control: 3
+2025-03-24 14:41:01,733 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=dt,pnw
+2025-03-24 14:41:04,667 - ERROR - Daily request failed: 401
+2025-03-24 14:41:04,671 - ERROR - Failed to retrieve raw data.
+2025-03-24 14:41:15,259 - INFO - Fetching data for exp: 429, plant: 25373, control: 3
+2025-03-24 14:41:15,259 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=dt,pnw
+2025-03-24 14:41:15,480 - ERROR - Daily request failed: 422
+2025-03-24 14:41:15,482 - ERROR - Failed to retrieve raw data.
+2025-03-24 14:41:29,517 - INFO - Fetching data for exp: 429, plant: 25373, control: 3
+2025-03-24 14:41:29,518 - INFO - Fetching daily data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=dt,pnw
+2025-03-24 14:41:29,810 - INFO - Fetching continuous data from: https://spac.plant-ditech.com/api/data/getData?experimentId=429&controlSystemId=3&fromDate=2025-01-15T00:00:00&toDate=2025-02-27T00:00:00&plants=25373&params=s4,wthrsrh,wthrstemp,wthrspar,wthrsvpd
+2025-03-24 14:41:30,816 - INFO - got the data of plant 25373, exp 429 from Date:2025-01-15 to 2025-02-26
+2025-03-24 14:41:30,824 - INFO - df head: 
+                index       s4  wsrh  wstemp  wspar      vpd  control_id  exp_ID plant_ID plant_type soil_sand
+0 2025-01-15 00:00:00  2698.43  61.6    17.0    0.0  0.74349           3     429    25373     cereal      soil
+1 2025-01-15 00:03:00  2698.65  62.8    16.0    0.0  0.67586           3     429    25373     cereal      soil
+2 2025-01-15 00:06:00  2698.02  63.7    16.0    0.0  0.65951           3     429    25373     cereal      soil
+2025-03-24 14:41:30,861 - INFO - daily df head: 
+   timestamp     wstemp       wsrh       wspar       vpd  exp_ID plant_ID plant_type soil_sand  light_hours      DLI  control_id     dt        pnw
+0 2025-01-15  19.025381  60.026396  241.316327  0.936326   429.0    25373     cereal      soil          9.8  8.51364         3.0  45.09  182.92452
+1 2025-01-16  19.045455  69.527020  224.693878  0.718868   429.0    25373     cereal      soil          9.8  7.92720         3.0  45.30  189.40732
+2 2025-01-17  18.310945  67.386070  198.445000  0.713376   429.0    25373     cereal      soil         10.0  7.14402         3.0  44.55  194.94715
+2025-03-24 14:41:30,869 - INFO - Selecting relevant columns from DataFrame.
+2025-03-24 14:41:30,870 - INFO - Final dataset prepared successfully.
+2025-03-24 14:41:36,523 - INFO - Dropped 2 rows with NaN values.
+2025-03-24 14:41:36,525 - INFO - Loading models for evaluation.
+2025-03-24 14:41:36,806 - INFO - comparing modles performance
+2025-03-24 14:41:36,952 - INFO - the best model is: Random Forest
+2025-03-24 14:41:36,958 - INFO - Generating correlation plot for Random Forest
