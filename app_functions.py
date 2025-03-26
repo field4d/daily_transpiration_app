@@ -517,7 +517,7 @@ def load_and_test_models(x, y):
         st.write("- Is the plant weight measurement trustable?")
         st.write("- Is the plant grown in 4L pots?")
         
-        current_soil_type = x['encoded_soil'].map({0: 'sand', 1: 'soil'}).iloc[0]
+        current_soil_type = x['encoded_soil'].iloc[0] #map({0: 'sand', 1: 'soil'})
         if current_soil_type==0:
             st.write("- Is this plant grown in sand (Silica sand grade 20-30)? ")  
         elif current_soil_type==1:
