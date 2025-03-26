@@ -514,20 +514,20 @@ def load_and_test_models(x, y):
     # Check if model performance is poor
     if evaluation_df.loc[best_model_name, 'R2'] < 0.5:
         st.warning("Model performance is low. Please verify the following:")
-        st.write("- Is the plant weight measurement trustable?")
-        st.write("- Is the plant grown in 4L pots?")
+        st.warning("- Is the plant weight measurement trustable?")
+        st.warning("- Is the plant grown in 4L pots?")
         
         current_soil_type = x['encoded_soil'].iloc[0] #map({0: 'sand', 1: 'soil'})
         if current_soil_type==0:
-            st.write("- Is this plant grown in sand (Silica sand grade 20-30)? ")  
+            st.warning("- Is this plant grown in sand (Silica sand grade 20-30)? ")  
         elif current_soil_type==1:
-            st.write("- Is this plant grown in soil (55% peat, 20% tuff and 25% puffed coconut coir fiber)?")
+            st.warning("- Is this plant grown in soil (55% peat, 20% tuff and 25% puffed coconut coir fiber)?")
 
         current_crop_type = x['encoded_plant'].iloc[0] #map({0:'tomato', 1:'cereal'})
         if current_crop_type==0:
-            st.write("- Is this plant actually a tomato (similar to M82)? ")  
+            st.warning("- Is this plant actually a tomato (similar to M82)? ")  
         elif current_crop_type==1:
-            st.write("- Is this plant actually a cereal (like wheat or barley)?")
+            st.warning("- Is this plant actually a cereal (like wheat or barley)?")
         
     #plot
     # Generate predictions using the y_predictions_df function

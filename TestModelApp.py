@@ -19,6 +19,9 @@ st.write(
     "You sould open the experimnt, and inspect the relevent plant using Analysis--> Graph viewer\n\n"
     "Look at the daily transpiration and the plant net weight to mack sure these parameters are accuarte\n\n"
 )
+st.warning("⚠️ Note: Your data is not stored or saved in any way.")
+st.warning("This app is for testing purposes only. The models are trained on specific data and may not generalize well to all experiments and greenhouses.")
+
 # Info Button with Expander
 with st.expander("ℹ️ Where can I find my Control ID, Experiment ID, or Plant ID?"):
     st.write(
