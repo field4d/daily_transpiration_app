@@ -1,5 +1,5 @@
 import streamlit as st
-from app_functions import validate_bearer_token, get_daily_data_from_SPAC, load_and_test_models, clean_data, adjust_plant_weight, change_soil_type
+from app_functions import validate_bearer_token, get_daily_data_from_SPAC, load_and_test_models, clean_data, adjust_plant_weight
 import logging
 
 # Configure logging
