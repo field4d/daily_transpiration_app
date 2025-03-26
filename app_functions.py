@@ -28,31 +28,33 @@ def validate_bearer_token(token):
 
 def check_soil_sand(df, threshold=4700):
     """
-    Determines if the plant is grown in soil or sand based on the initial weight (s4 column).
+    Determines if the plant is grown in soil or sand based on the initial weight ('s4' column).
     
     Args:
-    df (DataFrame): The DataFrame containing the plant weight information (s4 column).
-    threshold (int, optional): The weight threshold to distinguish between soil and sand. Defaults to 4700.
+        df (DataFrame): Data containing the 's4' column (weight measurements).
+        threshold (int, optional): Threshold to classify between soil and sand. Default is 4700.
     
     Returns:
-    str: 'sand' if the median weight in the first 300 rows exceeds the threshold, otherwise 'soil'.
-    
-    Description:
-    - The function checks the initial 300 rows of the 's4' column (which is the weight data).
-    - If the median weight for these rows exceeds the provided threshold, the medium is classified as 'sand'.
-    - If the median weight is less than or equal to the threshold, the medium is classified as 'soil'.
+        str: 'sand' if median weight exceeds threshold, 'soil' if below threshold,
+             or 'unknown' if there is insufficient data.
     """
+    # Check if 's4' exists and has non-NaN data
+    if 's4' not in df.columns or df['s4'].iloc[:1440].dropna().empty:
+        logging.warning("Insufficient data in the first 3 days of 's4' to determine soil/sand.")
+        return 'unknown'
     
-    # Calculate the median weight from the first 300 rows of the 's4' column
-    is_sand = (df['s4'].iloc[0:300]).median(axis=0) > threshold
+    if df['s4'].iloc[:1440].median() >= 10000:
+        logging.warning("Large pots, can't infer soil type by pot weight")
+        return 'unknown'
     
-    # If the median weight exceeds the threshold, it is classified as 'sand', otherwise 'soil'
-    if is_sand:
-        soil_sand = 'sand'
-    else:
-        soil_sand = 'soil'
+    # Calculate median and classify
+    median_weight = df['s4'].iloc[:1440].median()
+    is_sand = median_weight > threshold
+
+    logging.info(f"Median weight: {median_weight}, Classified as: {'sand' if is_sand else 'soil'}")
     
-    return soil_sand
+    return 'sand' if is_sand else 'soil'
+
 
 def fetch_data_from_SPAC(start_date, end_date, authorization, plants_id, exp_id, control_id):
     """
@@ -109,7 +111,7 @@ def fetch_data_from_SPAC(start_date, end_date, authorization, plants_id, exp_id,
         logging.error(f"Request error: {req_err}")
         return None
 
-def process_SPAC_data(raw_data, start_date, end_date, plants_id, exp_id, control_id, plant_type):
+def process_SPAC_data(raw_data, start_date, end_date, plants_id, exp_id, control_id, plant_type, soil_type=None):
     """
     Processes raw SPAC API data and converts it into structured DataFrames.
     
@@ -169,7 +171,10 @@ def process_SPAC_data(raw_data, start_date, end_date, plants_id, exp_id, control
     merged_data['exp_ID'] = exp_id
     merged_data['plant_ID'] = group_data['plants'][0]
     merged_data['plant_type'] = plant_type
-    merged_data['soil_sand'] = check_soil_sand(merged_data, threshold=4700)
+    if soil_type:
+        merged_data['soil_sand'] = soil_type
+    else:
+        merged_data['soil_sand'] = check_soil_sand(merged_data, threshold=4700)
         
     merged_data = merged_data.reset_index() # Reset index so timestamp is in the table
 
@@ -284,7 +289,7 @@ def process_plant_weight(data):
 
     return data
 
-def get_daily_data_from_SPAC(start_date, end_date, authorization, plant_id, exp_id, control_id, plant_type):
+def get_daily_data_from_SPAC(start_date, end_date, authorization, plant_id, exp_id, control_id, plant_type, soil_type):
     """
     Fetches and processes daily aggregated data from SPAC
     Returns:
@@ -296,7 +301,7 @@ def get_daily_data_from_SPAC(start_date, end_date, authorization, plant_id, exp_
         logging.error("Failed to retrieve raw data.")
         return None
 
-    plant_df, plant_daily_data = process_SPAC_data(raw_data, start_date, end_date, plant_id, exp_id, control_id, plant_type)
+    plant_df, plant_daily_data = process_SPAC_data(raw_data, start_date, end_date, plant_id, exp_id, control_id, plant_type, soil_type)
     if plant_df is None or plant_daily_data is None:
         logging.error("Processing step failed.")
         return None
@@ -374,17 +379,6 @@ def adjust_plant_weight(df):
 
     return df
 
-
-def change_soil_type(df):
-    """
-    Allow user to change the soil type (sand/soil) if wrongly classified and update encoding.
-    """
-    current_type = df['encoded_soil'].iloc[0]
-    user_choice = st.selectbox("Was the soil type classification correct? If not, select the correct type:", [current_type, 0, 1], index=0)
-    if user_choice != current_type:
-        df['encoded_soil'] = user_choice
-        st.success(f"Soil type encoding changed to {df['encoded_soil'].iloc[0]}.")
-    return df
 
 def evaluate_and_compare_models(models, X_test, y_test, scaler=None):
     """
@@ -522,8 +516,13 @@ def load_and_test_models(x, y):
         st.warning("Model performance is low. Please verify the following:")
         st.write("- Is the plant weight measurement trustable?")
         st.write("- Is the plant grown in 4L pots?")
+        
         current_soil_type = x['encoded_soil'].map({0: 'sand', 1: 'soil'}).iloc[0]
-        st.write(f"- Is the plant grown in {current_soil_type}?")
+        if current_soil_type==0:
+            st.write("- Is this plant grown in sand (Silica sand grade 20-30)? ")  
+        elif current_soil_type==1:
+            st.write("- Is this plant grown in soil (55% peat, 20% tuff and 25% puffed coconut coir fiber)?")
+
         current_crop_type = x['encoded_plant'].iloc[0] #map({0:'tomato', 1:'cereal'})
         if current_crop_type==0:
             st.write("- Is this plant actually a tomato (similar to M82)? ")  

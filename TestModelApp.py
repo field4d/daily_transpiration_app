@@ -41,6 +41,7 @@ plant_id = st.number_input("Enter Plant ID", min_value=1, step=1)
 start_date = st.date_input("Start Date")
 end_date = st.date_input("End Date")
 plant_type = st.selectbox("Choose Plant Type", ["tomato", "cereal"])
+soil_type = st.selectbox("Choose Soil Type", ["sand", "soil"])
 
 # Checkbox for irrigation status
 irrigation_status = st.checkbox("This plant was well irrigated and did not reach pot limitation between the dates provided")
@@ -83,7 +84,7 @@ if st.button("Get my data"):
     
     else:
         try:
-            user_data = get_daily_data_from_SPAC(start_date, end_date, authorization, plant_id, exp_id, control_id, plant_type)
+            user_data = get_daily_data_from_SPAC(start_date, end_date, authorization, plant_id, exp_id, control_id, plant_type, soil_type)
             if user_data is None:
                 st.error("Data retrieval failed. Please check your inputs or try again later.")
             else:
